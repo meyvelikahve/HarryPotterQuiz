@@ -1,0 +1,417 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D44C46DD2BCD52450086E5E7 /* HarryPotterQuizApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44C46DC2BCD52450086E5E7 /* HarryPotterQuizApp.swift */; };
+		D44C46DF2BCD52450086E5E7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44C46DE2BCD52450086E5E7 /* HomeView.swift */; };
+		D44C46E12BCD52470086E5E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D44C46E02BCD52470086E5E7 /* Assets.xcassets */; };
+		D44C46E42BCD52470086E5E7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D44C46E32BCD52470086E5E7 /* Preview Assets.xcassets */; };
+		D44C46EB2BCD52E80086E5E7 /* trivia.json in Resources */ = {isa = PBXBuildFile; fileRef = D44C46EA2BCD52E80086E5E7 /* trivia.json */; };
+		D44C46FA2BCD539A0086E5E7 /* spellcraft.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D44C46F22BCD53990086E5E7 /* spellcraft.mp3 */; };
+		D44C46FB2BCD539A0086E5E7 /* magic-wand.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D44C46F32BCD53990086E5E7 /* magic-wand.mp3 */; };
+		D44C46FC2BCD539A0086E5E7 /* let-the-mystery-unfold.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D44C46F42BCD53990086E5E7 /* let-the-mystery-unfold.mp3 */; };
+		D44C46FD2BCD539A0086E5E7 /* page-flip.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D44C46F52BCD53990086E5E7 /* page-flip.mp3 */; };
+		D44C46FE2BCD539A0086E5E7 /* hiding-place-in-the-forest.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D44C46F62BCD53990086E5E7 /* hiding-place-in-the-forest.mp3 */; };
+		D44C46FF2BCD539A0086E5E7 /* deep-in-the-dell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D44C46F72BCD539A0086E5E7 /* deep-in-the-dell.mp3 */; };
+		D44C47002BCD539A0086E5E7 /* negative-beeps.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D44C46F82BCD539A0086E5E7 /* negative-beeps.mp3 */; };
+		D44C47012BCD539A0086E5E7 /* magic-in-the-air.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D44C46F92BCD539A0086E5E7 /* magic-in-the-air.mp3 */; };
+		D44C47032BCD55EA0086E5E7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44C47022BCD55EA0086E5E7 /* Constants.swift */; };
+		D44C47052BCDB14C0086E5E7 /* InstructionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44C47042BCDB14C0086E5E7 /* InstructionsView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D44C46D92BCD52450086E5E7 /* HarryPotterQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HarryPotterQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D44C46DC2BCD52450086E5E7 /* HarryPotterQuizApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarryPotterQuizApp.swift; sourceTree = "<group>"; };
+		D44C46DE2BCD52450086E5E7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D44C46E02BCD52470086E5E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D44C46E32BCD52470086E5E7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D44C46EA2BCD52E80086E5E7 /* trivia.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = trivia.json; sourceTree = "<group>"; };
+		D44C46F22BCD53990086E5E7 /* spellcraft.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = spellcraft.mp3; sourceTree = "<group>"; };
+		D44C46F32BCD53990086E5E7 /* magic-wand.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "magic-wand.mp3"; sourceTree = "<group>"; };
+		D44C46F42BCD53990086E5E7 /* let-the-mystery-unfold.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "let-the-mystery-unfold.mp3"; sourceTree = "<group>"; };
+		D44C46F52BCD53990086E5E7 /* page-flip.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "page-flip.mp3"; sourceTree = "<group>"; };
+		D44C46F62BCD53990086E5E7 /* hiding-place-in-the-forest.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "hiding-place-in-the-forest.mp3"; sourceTree = "<group>"; };
+		D44C46F72BCD539A0086E5E7 /* deep-in-the-dell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "deep-in-the-dell.mp3"; sourceTree = "<group>"; };
+		D44C46F82BCD539A0086E5E7 /* negative-beeps.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "negative-beeps.mp3"; sourceTree = "<group>"; };
+		D44C46F92BCD539A0086E5E7 /* magic-in-the-air.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "magic-in-the-air.mp3"; sourceTree = "<group>"; };
+		D44C47022BCD55EA0086E5E7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D44C47042BCDB14C0086E5E7 /* InstructionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D44C46D62BCD52450086E5E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D44C46D02BCD52450086E5E7 = {
+			isa = PBXGroup;
+			children = (
+				D44C46DB2BCD52450086E5E7 /* HarryPotterQuiz */,
+				D44C46DA2BCD52450086E5E7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D44C46DA2BCD52450086E5E7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D44C46D92BCD52450086E5E7 /* HarryPotterQuiz.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D44C46DB2BCD52450086E5E7 /* HarryPotterQuiz */ = {
+			isa = PBXGroup;
+			children = (
+				D44C46F12BCD53910086E5E7 /* Audio */,
+				D44C46EC2BCD532A0086E5E7 /* Data */,
+				D44C46ED2BCD533F0086E5E7 /* View */,
+				D44C46DC2BCD52450086E5E7 /* HarryPotterQuizApp.swift */,
+				D44C47022BCD55EA0086E5E7 /* Constants.swift */,
+				D44C46E02BCD52470086E5E7 /* Assets.xcassets */,
+				D44C46E22BCD52470086E5E7 /* Preview Content */,
+			);
+			path = HarryPotterQuiz;
+			sourceTree = "<group>";
+		};
+		D44C46E22BCD52470086E5E7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D44C46E32BCD52470086E5E7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D44C46EC2BCD532A0086E5E7 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D44C46EA2BCD52E80086E5E7 /* trivia.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		D44C46ED2BCD533F0086E5E7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D44C46DE2BCD52450086E5E7 /* HomeView.swift */,
+				D44C47042BCDB14C0086E5E7 /* InstructionsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D44C46F12BCD53910086E5E7 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				D44C46F72BCD539A0086E5E7 /* deep-in-the-dell.mp3 */,
+				D44C46F62BCD53990086E5E7 /* hiding-place-in-the-forest.mp3 */,
+				D44C46F42BCD53990086E5E7 /* let-the-mystery-unfold.mp3 */,
+				D44C46F92BCD539A0086E5E7 /* magic-in-the-air.mp3 */,
+				D44C46F32BCD53990086E5E7 /* magic-wand.mp3 */,
+				D44C46F82BCD539A0086E5E7 /* negative-beeps.mp3 */,
+				D44C46F52BCD53990086E5E7 /* page-flip.mp3 */,
+				D44C46F22BCD53990086E5E7 /* spellcraft.mp3 */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D44C46D82BCD52450086E5E7 /* HarryPotterQuiz */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D44C46E72BCD52470086E5E7 /* Build configuration list for PBXNativeTarget "HarryPotterQuiz" */;
+			buildPhases = (
+				D44C46D52BCD52450086E5E7 /* Sources */,
+				D44C46D62BCD52450086E5E7 /* Frameworks */,
+				D44C46D72BCD52450086E5E7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HarryPotterQuiz;
+			productName = HarryPotterQuiz;
+			productReference = D44C46D92BCD52450086E5E7 /* HarryPotterQuiz.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D44C46D12BCD52450086E5E7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					D44C46D82BCD52450086E5E7 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = D44C46D42BCD52450086E5E7 /* Build configuration list for PBXProject "HarryPotterQuiz" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D44C46D02BCD52450086E5E7;
+			productRefGroup = D44C46DA2BCD52450086E5E7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D44C46D82BCD52450086E5E7 /* HarryPotterQuiz */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D44C46D72BCD52450086E5E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D44C46FD2BCD539A0086E5E7 /* page-flip.mp3 in Resources */,
+				D44C46FC2BCD539A0086E5E7 /* let-the-mystery-unfold.mp3 in Resources */,
+				D44C47012BCD539A0086E5E7 /* magic-in-the-air.mp3 in Resources */,
+				D44C46E42BCD52470086E5E7 /* Preview Assets.xcassets in Resources */,
+				D44C46FE2BCD539A0086E5E7 /* hiding-place-in-the-forest.mp3 in Resources */,
+				D44C46E12BCD52470086E5E7 /* Assets.xcassets in Resources */,
+				D44C46FB2BCD539A0086E5E7 /* magic-wand.mp3 in Resources */,
+				D44C46EB2BCD52E80086E5E7 /* trivia.json in Resources */,
+				D44C46FA2BCD539A0086E5E7 /* spellcraft.mp3 in Resources */,
+				D44C46FF2BCD539A0086E5E7 /* deep-in-the-dell.mp3 in Resources */,
+				D44C47002BCD539A0086E5E7 /* negative-beeps.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D44C46D52BCD52450086E5E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D44C46DF2BCD52450086E5E7 /* HomeView.swift in Sources */,
+				D44C47052BCDB14C0086E5E7 /* InstructionsView.swift in Sources */,
+				D44C46DD2BCD52450086E5E7 /* HarryPotterQuizApp.swift in Sources */,
+				D44C47032BCD55EA0086E5E7 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D44C46E52BCD52470086E5E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D44C46E62BCD52470086E5E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D44C46E82BCD52470086E5E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HarryPotterQuiz/Preview Content\"";
+				DEVELOPMENT_TEAM = N75M27XJSU;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.meyvelikahve.HarryPotterQuiz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D44C46E92BCD52470086E5E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HarryPotterQuiz/Preview Content\"";
+				DEVELOPMENT_TEAM = N75M27XJSU;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.meyvelikahve.HarryPotterQuiz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D44C46D42BCD52450086E5E7 /* Build configuration list for PBXProject "HarryPotterQuiz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D44C46E52BCD52470086E5E7 /* Debug */,
+				D44C46E62BCD52470086E5E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D44C46E72BCD52470086E5E7 /* Build configuration list for PBXNativeTarget "HarryPotterQuiz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D44C46E82BCD52470086E5E7 /* Debug */,
+				D44C46E92BCD52470086E5E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D44C46D12BCD52450086E5E7 /* Project object */;
+}
