@@ -16,6 +16,10 @@ struct HomeView: View {
     
     @State private var animateViewsIn = false
     
+    @State private var showInstructions = false
+    @State private var showSettings = false
+    @State private var playGame = false
+    
     var body: some View {
         GeometryReader{ geo in
             ZStack{
@@ -53,8 +57,10 @@ struct HomeView: View {
                     
                     Spacer()
                     
+                   
+                    
                     VStack {
-                        if animateViewsIn {
+                        if false {
                             VStack{
                                 Text("Recent Scores")
                                     .font(.title2)
@@ -81,7 +87,7 @@ struct HomeView: View {
                         Group {
                             if animateViewsIn {
                                 Button{
-                                    // show instructions screen
+                                    showInstructions.toggle()
                                 } label: {
                                     Image(systemName: "info.circle.fill")
                                         .font(.largeTitle)
@@ -89,6 +95,10 @@ struct HomeView: View {
                                         .shadow(radius: 5)
                                 }
                             .transition(.offset(x: -geo.size.width/4))
+                            .sheet(isPresented: $showInstructions, content: {
+                                InstructionsView()
+                        
+                            })
                             }
                             
                         }
@@ -99,7 +109,7 @@ struct HomeView: View {
                         VStack {
                             if animateViewsIn {
                                 Button{
-                                    
+                                    playGame.toggle()
                                 } label: {
                                     Text("Play")
                                         .font(.largeTitle)
@@ -117,6 +127,9 @@ struct HomeView: View {
                                     }
                                 }
                                 .transition(.offset(y: geo.size.height/3))
+                                .fullScreenCover(isPresented: $playGame, content: {
+                                    GameplayView()
+                                })
                             }
                         }
                         .animation(.easeOut(duration: 0.7).delay(2), value: animateViewsIn)
@@ -127,6 +140,7 @@ struct HomeView: View {
                         Group {
                             if animateViewsIn {
                                 Button{
+                                    showSettings.toggle()
                                     
                                 } label: {
                                     Image(systemName: "gearshape.fill")
@@ -135,6 +149,9 @@ struct HomeView: View {
                                         .shadow(radius: 5)
                                 }
                                 .transition(.offset(x: geo.size.width / 4))
+                                .sheet(isPresented: $showSettings, content: {
+                                    SettingView()
+                                })
                             }
                         }
                         .animation(.easeOut(duration: 0.7).delay(2.7), value: animateViewsIn)

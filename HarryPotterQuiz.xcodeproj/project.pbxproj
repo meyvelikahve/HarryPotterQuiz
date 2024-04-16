@@ -22,6 +22,10 @@
 		D44C47012BCD539A0086E5E7 /* magic-in-the-air.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D44C46F92BCD539A0086E5E7 /* magic-in-the-air.mp3 */; };
 		D44C47032BCD55EA0086E5E7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44C47022BCD55EA0086E5E7 /* Constants.swift */; };
 		D44C47052BCDB14C0086E5E7 /* InstructionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44C47042BCDB14C0086E5E7 /* InstructionsView.swift */; };
+		D44C47082BCF0DAD0086E5E7 /* InfoBackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44C47072BCF0DAD0086E5E7 /* InfoBackgroundImage.swift */; };
+		D44C470C2BCF11C10086E5E7 /* ButtonExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44C470B2BCF11C10086E5E7 /* ButtonExtention.swift */; };
+		D44C470E2BCF13320086E5E7 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44C470D2BCF13320086E5E7 /* SettingView.swift */; };
+		D44C47102BCF1FBC0086E5E7 /* GameplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44C470F2BCF1FBC0086E5E7 /* GameplayView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +45,10 @@
 		D44C46F92BCD539A0086E5E7 /* magic-in-the-air.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "magic-in-the-air.mp3"; sourceTree = "<group>"; };
 		D44C47022BCD55EA0086E5E7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D44C47042BCDB14C0086E5E7 /* InstructionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsView.swift; sourceTree = "<group>"; };
+		D44C47072BCF0DAD0086E5E7 /* InfoBackgroundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoBackgroundImage.swift; sourceTree = "<group>"; };
+		D44C470B2BCF11C10086E5E7 /* ButtonExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtention.swift; sourceTree = "<group>"; };
+		D44C470D2BCF13320086E5E7 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		D44C470F2BCF1FBC0086E5E7 /* GameplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplayView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +85,7 @@
 				D44C46EC2BCD532A0086E5E7 /* Data */,
 				D44C46ED2BCD533F0086E5E7 /* View */,
 				D44C46DC2BCD52450086E5E7 /* HarryPotterQuizApp.swift */,
-				D44C47022BCD55EA0086E5E7 /* Constants.swift */,
+				D44C47092BCF119A0086E5E7 /* Utils */,
 				D44C46E02BCD52470086E5E7 /* Assets.xcassets */,
 				D44C46E22BCD52470086E5E7 /* Preview Content */,
 			);
@@ -103,8 +111,11 @@
 		D44C46ED2BCD533F0086E5E7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D44C47062BCF0D830086E5E7 /* components */,
 				D44C46DE2BCD52450086E5E7 /* HomeView.swift */,
 				D44C47042BCDB14C0086E5E7 /* InstructionsView.swift */,
+				D44C470D2BCF13320086E5E7 /* SettingView.swift */,
+				D44C470F2BCF1FBC0086E5E7 /* GameplayView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -122,6 +133,31 @@
 				D44C46F22BCD53990086E5E7 /* spellcraft.mp3 */,
 			);
 			path = Audio;
+			sourceTree = "<group>";
+		};
+		D44C47062BCF0D830086E5E7 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				D44C47072BCF0DAD0086E5E7 /* InfoBackgroundImage.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		D44C47092BCF119A0086E5E7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D44C470A2BCF11A80086E5E7 /* extentions */,
+				D44C47022BCD55EA0086E5E7 /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D44C470A2BCF11A80086E5E7 /* extentions */ = {
+			isa = PBXGroup;
+			children = (
+				D44C470B2BCF11C10086E5E7 /* ButtonExtention.swift */,
+			);
+			path = extentions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,10 +239,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D44C47102BCF1FBC0086E5E7 /* GameplayView.swift in Sources */,
 				D44C46DF2BCD52450086E5E7 /* HomeView.swift in Sources */,
 				D44C47052BCDB14C0086E5E7 /* InstructionsView.swift in Sources */,
+				D44C470C2BCF11C10086E5E7 /* ButtonExtention.swift in Sources */,
+				D44C470E2BCF13320086E5E7 /* SettingView.swift in Sources */,
 				D44C46DD2BCD52450086E5E7 /* HarryPotterQuizApp.swift in Sources */,
 				D44C47032BCD55EA0086E5E7 /* Constants.swift in Sources */,
+				D44C47082BCF0DAD0086E5E7 /* InfoBackgroundImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
