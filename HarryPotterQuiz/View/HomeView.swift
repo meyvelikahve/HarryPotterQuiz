@@ -9,6 +9,9 @@ import SwiftUI
 import AVKit
 
 struct HomeView: View {
+    @EnvironmentObject private var appPurchase : AppPurchase
+    @EnvironmentObject private var gameViewModel : GameViewModel
+    
     @State private var audioPlayer: AVAudioPlayer!
     
     @State private var scalePlayButton = false
@@ -109,6 +112,8 @@ struct HomeView: View {
                         VStack {
                             if animateViewsIn {
                                 Button{
+                                    filterQuestions()
+                                    gameViewModel.startGame()
                                     playGame.toggle()
                                 } label: {
                                     Text("Play")
@@ -116,7 +121,7 @@ struct HomeView: View {
                                         .foregroundColor(.white)
                                         .padding(.vertical, 7)
                                         .padding(.horizontal, 50)
-                                        .background(.brown)
+                                        .background(appPurchase.books.contains(.active) ? .brown : .gray)
                                         .cornerRadius(7)
                                         .shadow(radius: 5)
                                 }
@@ -129,7 +134,9 @@ struct HomeView: View {
                                 .transition(.offset(y: geo.size.height/3))
                                 .fullScreenCover(isPresented: $playGame, content: {
                                     GameplayView()
+                                        .environmentObject(gameViewModel)
                                 })
+                                .disabled(appPurchase.books.contains(.active) ? false : true)
                             }
                         }
                         .animation(.easeOut(duration: 0.7).delay(2), value: animateViewsIn)
@@ -151,6 +158,7 @@ struct HomeView: View {
                                 .transition(.offset(x: geo.size.width / 4))
                                 .sheet(isPresented: $showSettings, content: {
                                     SettingView()
+                                        .environmentObject(appPurchase)
                                 })
                             }
                         }
@@ -160,6 +168,18 @@ struct HomeView: View {
                         Spacer()
                     }
                     .frame(width: geo.size.width)
+                    
+                    VStack{
+                        if animateViewsIn {
+                            if appPurchase.books.contains(.active) == false {
+                                Text("No questions available. Go settings and choice a book.")
+                                    .multilineTextAlignment(.center)
+                                    .transition(.opacity)
+                                    .padding(.horizontal,30)
+                            }
+                        }
+                    }
+                    .animation(.easeInOut.delay(3), value: animateViewsIn)
                     Spacer()
                 }
             }
@@ -180,8 +200,24 @@ struct HomeView: View {
         audioPlayer.numberOfLoops = -1
         audioPlayer.play()
     }
+    
+    private func filterQuestions(){
+        var books : [Int] = []
+        
+        for (index, status) in appPurchase.books.enumerated(){
+            if status == .active {
+                books.append(index+1)
+            }
+        }
+        
+        gameViewModel.filterQuestions(to: books)
+        
+        gameViewModel.newQuestion()
+    }
 }
 
 #Preview {
     HomeView()
+        .environmentObject(AppPurchase())
+        .environmentObject(GameViewModel())
 }

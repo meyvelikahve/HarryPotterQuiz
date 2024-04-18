@@ -1,0 +1,127 @@
+{
+  "identifier" : "C52AF72D",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "B8211E50",
+      "localizations" : [
+        {
+          "description" : "Unlock questions from HP4",
+          "displayName" : "HP4 Book",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "hp4",
+      "referenceName" : "HP4",
+      "type" : "NonConsumable"
+    },
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "E7A7A623",
+      "localizations" : [
+        {
+          "description" : "Unlock questions from HP7",
+          "displayName" : "HP7 Book",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "hp7",
+      "referenceName" : "HP7",
+      "type" : "NonConsumable"
+    },
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "396232C9",
+      "localizations" : [
+        {
+          "description" : "Unlock questions from HP6",
+          "displayName" : "HP6 Book",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "hp6",
+      "referenceName" : "HP6",
+      "type" : "NonConsumable"
+    },
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "681D0488",
+      "localizations" : [
+        {
+          "description" : "Unlock questions from HP5",
+          "displayName" : "HP5 Book",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "hp5",
+      "referenceName" : "HP5",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+    "_failTransactionsEnabled" : false,
+    "_locale" : "en_US",
+    "_storefront" : "USA",
+    "_storeKitErrors" : [
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Load Products"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Purchase"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Verification"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Store Sync"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Subscription Status"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Transaction"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Manage Subscriptions Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Refund Request Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Offer Code Redeem Sheet"
+      }
+    ]
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 3,
+    "minor" : 0
+  }
+}

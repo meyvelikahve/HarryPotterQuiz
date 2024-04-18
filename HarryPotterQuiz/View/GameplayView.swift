@@ -10,6 +10,8 @@ import AVKit
 
 struct GameplayView: View {
     @Environment(\.dismiss) private var dismiss
+    @EnvironmentObject private var gameViewModel: GameViewModel
+    
     @Namespace private var namespace
     
     @State private var musicPlayer : AVAudioPlayer!
@@ -27,7 +29,6 @@ struct GameplayView: View {
     @State private var revealBook = false
     @State private var wrongAnswersTapped : [Int] = []
     
-    let tempAnswers = [true, false, false, false]
     
     var body: some View {
         GeometryReader { geo in
@@ -42,12 +43,13 @@ struct GameplayView: View {
                     // MARK: Controlls
                     HStack{
                         Button("End Game"){
+                            gameViewModel.endGame()
                             dismiss()
                         }
                         .buttonStyle(.borderedProminent)
                         .tint(.red.opacity(0.5))
                         Spacer()
-                        Text("Score: 33")
+                        Text("Score: \(gameViewModel.gameScore)")
                     }
                     .padding()
                     .padding(.vertical, 30)
@@ -55,7 +57,7 @@ struct GameplayView: View {
                     // MARK: Question
                     VStack {
                         if animateViewsIn {
-                            Text("Who is Harry Potter?")
+                            Text(gameViewModel.currentQuestion.question)
                                 .font(.custom(Constants.hpFont, size: 50))
                                 .multilineTextAlignment(.center)
                             .padding()
@@ -91,6 +93,7 @@ struct GameplayView: View {
                                         }
                                         
                                         playSfxSound(name: "page-flip")
+                                        gameViewModel.questionScore -= 1
                                     }
                                     .rotation3DEffect(
                                         .degrees(revealHint ? 180 : 0),
@@ -100,7 +103,7 @@ struct GameplayView: View {
                                     .opacity(revealHint ? 0 : 1)
                                     .offset(x: revealHint ? geo.size.width / 2 : 0)
                                     .overlay(
-                                        Text("The boy who ----")
+                                        Text(gameViewModel.currentQuestion.hint)
                                             .padding(.leading, 33)
                                             .minimumScaleFactor(0.5)
                                             .multilineTextAlignment(.center)
@@ -138,6 +141,7 @@ struct GameplayView: View {
                                     }
                                     
                                     playSfxSound(name: "page-flip")
+                                    gameViewModel.questionScore -= 1
                                 }
                                 .rotation3DEffect(
                                     .degrees(revealBook ? 180 : 0),
@@ -147,7 +151,7 @@ struct GameplayView: View {
                                 .opacity(revealBook ? 0 : 1)
                                 .offset(x: revealBook ? -geo.size.width / 2 : 0)
                                 .overlay(
-                                    Image("hp1")
+                                    Image("hp\(gameViewModel.currentQuestion.book)")
                                         .resizable()
                                         .scaledToFit()
                                         .cornerRadius(3)
@@ -168,12 +172,12 @@ struct GameplayView: View {
                     
                     // MARK: Answers
                     LazyVGrid(columns: [GridItem(),GridItem()], content: {
-                        ForEach (1..<5) { index in
-                            if tempAnswers[index-1] == true {
+                        ForEach (Array(gameViewModel.answers.enumerated()), id: \.offset) { index, answer in
+                            if gameViewModel.currentQuestion.answers[answer] == true {
                                 VStack {
                                     if animateViewsIn {
                                         if tappedCorrectAnswer == false {
-                                            Text("Answer \(index)")
+                                            Text(answer)
                                                 .minimumScaleFactor(0.5)
                                                 .multilineTextAlignment(.center)
                                                 .padding(10)
@@ -189,6 +193,11 @@ struct GameplayView: View {
                                                     }
                                                     
                                                     playSfxSound(name: "magic-wand")
+                                                    
+                                                    DispatchQueue.main.asyncAfter(deadline: .now() + 3.5
+                                                    ){
+                                                        gameViewModel.correct()
+                                                    }
                                                 }
                                         }
                                     }
@@ -198,7 +207,7 @@ struct GameplayView: View {
                             else {
                                 VStack {
                                     if animateViewsIn {
-                                        Text("Answer \(index)")
+                                        Text(answer)
                                             .minimumScaleFactor(0.5)
                                             .multilineTextAlignment(.center)
                                             .padding(10)
@@ -212,6 +221,7 @@ struct GameplayView: View {
                                                 }
                                                 
                                                 playSfxSound(name: "negative-beeps")
+                                                gameViewModel.questionScore -= 1
                                             }
                                             .scaleEffect(wrongAnswersTapped.contains(index) ? 0.8 : 1)
                                             .disabled(tappedCorrectAnswer || wrongAnswersTapped.contains(index))
@@ -233,7 +243,7 @@ struct GameplayView: View {
                     Spacer()
                     VStack{
                         if tappedCorrectAnswer {
-                            Text("5")
+                            Text("\(gameViewModel.questionScore)")
                                 .font(.largeTitle)
                                 .padding(.top, 50)
                                 .transition(.offset(y: -geo.size.height / 4))
@@ -262,7 +272,7 @@ struct GameplayView: View {
                     Spacer()
                     
                     if tappedCorrectAnswer {
-                        Text("Answer 1")
+                        Text(gameViewModel.correctAnswer)
                             .minimumScaleFactor(0.5)
                             .multilineTextAlignment(.center)
                             .frame(width: geo.size.width / 2.15, height: 80)
@@ -286,6 +296,8 @@ struct GameplayView: View {
                                 revealHint = false
                                 movePointsToScore = false
                                 wrongAnswersTapped = []
+                                
+                                gameViewModel.newQuestion()
                                 
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                                     animateViewsIn = true
@@ -320,7 +332,7 @@ struct GameplayView: View {
         .ignoresSafeArea()
         .onAppear{
             animateViewsIn = true
-            playMusic()
+           // playMusic()
         }
     }
     
@@ -347,4 +359,5 @@ struct GameplayView: View {
 
 #Preview {
     GameplayView()
+        .environmentObject(GameViewModel())
 }

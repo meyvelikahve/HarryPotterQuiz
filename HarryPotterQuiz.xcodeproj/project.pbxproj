@@ -26,6 +26,9 @@
 		D44C470C2BCF11C10086E5E7 /* ButtonExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44C470B2BCF11C10086E5E7 /* ButtonExtention.swift */; };
 		D44C470E2BCF13320086E5E7 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44C470D2BCF13320086E5E7 /* SettingView.swift */; };
 		D44C47102BCF1FBC0086E5E7 /* GameplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44C470F2BCF1FBC0086E5E7 /* GameplayView.swift */; };
+		D4BCBF162BD118F7006A3A36 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BCBF152BD118F7006A3A36 /* Question.swift */; };
+		D4BCBF192BD11CD2006A3A36 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BCBF182BD11CD2006A3A36 /* GameViewModel.swift */; };
+		D4BCBF1C2BD1350B006A3A36 /* AppPurchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BCBF1B2BD1350B006A3A36 /* AppPurchase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +52,10 @@
 		D44C470B2BCF11C10086E5E7 /* ButtonExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtention.swift; sourceTree = "<group>"; };
 		D44C470D2BCF13320086E5E7 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		D44C470F2BCF1FBC0086E5E7 /* GameplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplayView.swift; sourceTree = "<group>"; };
+		D4BCBF152BD118F7006A3A36 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		D4BCBF182BD11CD2006A3A36 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		D4BCBF1A2BD133DA006A3A36 /* HPConfig.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = HPConfig.storekit; sourceTree = "<group>"; };
+		D4BCBF1B2BD1350B006A3A36 /* AppPurchase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPurchase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,13 +88,16 @@
 		D44C46DB2BCD52450086E5E7 /* HarryPotterQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				D44C46DC2BCD52450086E5E7 /* HarryPotterQuizApp.swift */,
 				D44C46F12BCD53910086E5E7 /* Audio */,
 				D44C46EC2BCD532A0086E5E7 /* Data */,
+				D4BCBF142BD118B0006A3A36 /* Model */,
 				D44C46ED2BCD533F0086E5E7 /* View */,
-				D44C46DC2BCD52450086E5E7 /* HarryPotterQuizApp.swift */,
+				D4BCBF172BD11CB6006A3A36 /* ViewModel */,
 				D44C47092BCF119A0086E5E7 /* Utils */,
 				D44C46E02BCD52470086E5E7 /* Assets.xcassets */,
 				D44C46E22BCD52470086E5E7 /* Preview Content */,
+				D4BCBF1A2BD133DA006A3A36 /* HPConfig.storekit */,
 			);
 			path = HarryPotterQuiz;
 			sourceTree = "<group>";
@@ -158,6 +168,23 @@
 				D44C470B2BCF11C10086E5E7 /* ButtonExtention.swift */,
 			);
 			path = extentions;
+			sourceTree = "<group>";
+		};
+		D4BCBF142BD118B0006A3A36 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D4BCBF152BD118F7006A3A36 /* Question.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D4BCBF172BD11CB6006A3A36 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D4BCBF182BD11CD2006A3A36 /* GameViewModel.swift */,
+				D4BCBF1B2BD1350B006A3A36 /* AppPurchase.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,10 +269,13 @@
 				D44C47102BCF1FBC0086E5E7 /* GameplayView.swift in Sources */,
 				D44C46DF2BCD52450086E5E7 /* HomeView.swift in Sources */,
 				D44C47052BCDB14C0086E5E7 /* InstructionsView.swift in Sources */,
+				D4BCBF162BD118F7006A3A36 /* Question.swift in Sources */,
 				D44C470C2BCF11C10086E5E7 /* ButtonExtention.swift in Sources */,
 				D44C470E2BCF13320086E5E7 /* SettingView.swift in Sources */,
+				D4BCBF1C2BD1350B006A3A36 /* AppPurchase.swift in Sources */,
 				D44C46DD2BCD52450086E5E7 /* HarryPotterQuizApp.swift in Sources */,
 				D44C47032BCD55EA0086E5E7 /* Constants.swift in Sources */,
+				D4BCBF192BD11CD2006A3A36 /* GameViewModel.swift in Sources */,
 				D44C47082BCF0DAD0086E5E7 /* InfoBackgroundImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
